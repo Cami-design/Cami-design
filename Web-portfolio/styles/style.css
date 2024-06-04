@@ -1,0 +1,348 @@
+:root {
+    --clr-gray900: #111827;
+    --clr-yellow400: #facc15;
+    --clr-neutral500: #737373;
+    --clr-pink: #c381a2;
+}
+
+* {
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Clash Display', sans-serif, 200;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+.header {
+    z-index: 1;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 1em;
+    margin-top: 2em;
+
+}
+
+.header .hero__title {
+    font-size: 1.5vw;
+    align-self: center;
+}
+
+.header a {
+    font-size: 2vw;
+    font-family: 'Satoshi' sans-serif;
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+.header a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Satoshi';
+    color: var(--clr-gray900);
+    font-size: 2vw;
+    transition: color 0.2s ease-in-out;
+}
+ 
+.header a::after {
+     content: "";
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 0;
+     height: 1px;
+     background-color: var(--clr-pink);
+     transition: width 0.2s ease-in-out;
+}
+
+    
+.header a:hover {
+    color: var(--clr-pink);
+    transform: translateX(0);
+}
+  
+.header a:hover::after {
+    color: var(--clr-pink);
+    width: 100%;
+}
+
+.header__menu {
+    display:none; 
+}
+
+.header__bars {
+    color: var(--clr-gray900);
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: end;
+    margin-left: 40px;
+}
+
+@media (min-width: 750px) {
+ .container {
+   max-width: 640px;
+ }
+ .header__menu {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: 1em;
+    margin-top: -0.5em;
+ 
+    gap: 1em;
+    list-style-type: none;
+    color: var(--clr-neutral500);
+    text-decoration: none;
+    font-family: 'Serifbabe';
+    color: var(--clr-gray900);
+    font-size: 40px;
+}
+
+ header .header__bars {
+    display: block;
+    margin-left: auto;
+    margin-right: 1em;
+    margin-top: -0.5em;
+    margin-bottom: 0.5em;
+}
+ .header__link {
+   position: relative;
+   text-decoration: none;
+   font-family: 'Serifbabe';
+   color: var(--clr-gray900);
+   font-size: 4vw;
+   display: flex;
+   justify-content: flex-end;
+   transition: color 0.2s ease-in-out;
+ }
+
+ .header__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-pink);
+    transition: width 0.2s ease-in-out;
+ }
+  
+ .header__link:hover {
+    color: var(--clr-pink);
+
+    transform: translateX(0);
+ }
+  
+ .header__link:hover::after {
+    color: var(--clr-pink);
+    width: 100%;
+ }
+ header .header__bars {
+    display:none;
+ }
+ 
+}
+
+.header__link span {
+    pointer-events: none;
+}
+
+.header__bars {
+    width: 30px;
+    height: 30px;
+    display:block;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+    position: absolute;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+button {
+    display: inline-block;
+    font-size: 1.5em;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--clr-gray900);
+    padding: 0.5em 1em;
+    font-family:  'Satoshi', sans-serif;
+}
+
+button:hover {
+  
+    color: var(--clr-pink);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--clr-pink);
+    transition: width 0.2s ease-in-out;
+}
+
+button:hover::after {
+   color: var(--clr-yellow400);
+}
+
+.hero h2 {
+    position: absolute;
+    font-family: 'Satoshi', sans-serif;
+    size: 14vw;
+}
+
+
+
+.hero__img {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left, .right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .left img, .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  .left:hover img, .right:hover img {
+    transform: scale(1.1);
+  }
+  
+  .link {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .link:hover {
+    color: var(--clr-pink);
+    transition: 0ms ease-in-out;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 80px 50px 50px 50px;
+  }
+  
+  .grid-layout {
+    display: contents;
+  }
+  
+  .grid-layout1,.grid-layout2,.grid-layout3,.grid-layout4,.grid-layout5 {
+    grid-column: span 1;
+  }
+  
+  .caps {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  @media only screen and (max-width: 650px) {
+   .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+   .grid-layout1,.grid-layout2,.grid-layout3,.grid-layout4,.grid-layout5 {
+      grid-column: span 2;
+    }
+    img {
+      height: 400px;
+    }
+}
+
+
+footer h3 {
+    font-size: 8vw;
+    font-family: 'Satoshi' sans-serif;
+    align-content: center;
+    margin-bottom: 10px;
+    margin-top: 2em;
+    margin-left: 50px;
+}
+
+footer h3 a {
+    color: #111827;
+    text-decoration: none;
+    margin-left: 0px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+footer h3 a:hover {
+    color: var(--clr-pink);
+    transition: 0.3s;
+}
+
+
+footer h3 a:hover::after {
+    color: var(--clr-pink);
+    transition: 0.3s;
+    margin-left: 50px;
+}
+
+.footer__link a {
+    display: inline-block;;
+    color: var(--clr-neutral500);
+    text-decoration: none;
+    margin-left: 50px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.footer__link a:hover {
+    color: var(--clr-pink);
+    margin-left: 50px;
+}
+  
